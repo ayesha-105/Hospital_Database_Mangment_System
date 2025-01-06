@@ -18,7 +18,7 @@ WHERE Status IN
 'Scheduled')
 );
 
---Problem 3:Identify the medicines with the highest and lowest sales.
+--Problem 3:Identify the medicines with the highest and lowest sales
 SELECT Medicine_Name,  Quantity_Available, Brand_Name,
 CASE
 WHEN 

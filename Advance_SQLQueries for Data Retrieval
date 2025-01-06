@@ -1,6 +1,5 @@
 --Problem 1: List of Patients with Pending Billing Payments
-SELECT
-P.Name AS Patient_Name, 
+SELECT P.Name AS Patient_Name, 
 B.Total_Amount AS Bill_Amount, 
 B.Payment_Status
 FROM
@@ -10,8 +9,8 @@ B.Payment_Status = 'Pending' ORDER BY
 B.Total_Amount DESC;
 
 --Problem 2: List of Patients Name With their Blood Test
-SELECT
-P.Name AS Patient_Name,P.Patient_ID, M.Test_Results
+SELECT P.Name AS Patient_Name,
+P.Patient_ID, M.Test_Results
 FROM
 Patients P
 JOIN
@@ -20,8 +19,8 @@ WHERE
  M.Test_Results LIKE 'Blood test:%' ORDER BY M.Test_Results DESC;
 
 --Problem 3: List of Patients Name with Appointment Status “Scheduled”
-SELECT
-P.Name AS Patient_Name,P.Patient_ID, A.Status AS Appointment_Status
+SELECT P.Name AS Patient_Name,
+P.Patient_ID, A.Status AS Appointment_Status
 FROM
 Patients P
 JOIN
